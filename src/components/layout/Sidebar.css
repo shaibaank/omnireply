@@ -1,0 +1,13 @@
+.sidebar-avatar {
+  position: relative;
+}
+
+.sidebar-status-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--bg-sidebar);
+  border-radius: 50%;
+}

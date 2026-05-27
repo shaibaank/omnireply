@@ -1,0 +1,188 @@
+/* ===== AnalyticsPage CSS styles ===== */
+
+.analytics-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #F8FAFC;
+}
+
+.analytics-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.analytics-stat-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  padding: 6px;
+}
+
+.color-blue-icon { background: #E0F2FE; color: var(--primary); }
+.color-green-icon { background: #D1FAE5; color: var(--success); }
+.color-purple-icon { background: #EEF2FF; color: var(--info); }
+.color-orange-icon { background: #FEF3C7; color: var(--warning); }
+
+.stat-lbl-txt {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.analytics-charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.analytics-chart-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.analytics-chart-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Area Chart CSS simulation */
+.css-area-chart-approx {
+  height: 180px;
+  border-bottom: 1.5px solid var(--gray-200);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chart-grid-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.grid-line {
+  width: 100%;
+  height: 1px;
+  background: var(--gray-100);
+}
+
+.approx-area-gradient {
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(180deg, rgba(59,130,246,0.3) 0%, rgba(59,130,246,0) 100%);
+  clip-path: polygon(0% 60%, 15% 45%, 30% 70%, 45% 30%, 60% 55%, 75% 20%, 90% 40%, 100% 10%, 100% 100%, 0% 100%);
+  animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.chart-x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+/* Platform bars */
+.platform-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.platform-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lbl-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+}
+
+.lbl-row span {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lbl-row strong {
+  color: var(--text-secondary);
+}
+
+.prog-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--gray-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.prog-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.bg-green { background: var(--success); }
+.bg-blue { background: var(--primary); }
+.bg-purple { background: var(--info); }
+.bg-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+
+/* Leaderboard card */
+.analytics-ai-leaderboard-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.analytics-ai-leaderboard-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.agent-identity-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-bubble {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.agent-name-bold {
+  font-weight: 600;
+  color: var(--text-primary);
+}
